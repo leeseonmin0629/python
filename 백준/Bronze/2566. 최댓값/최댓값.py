@@ -1,14 +1,13 @@
 lst = []
 for i in range(9):
-    lst.append(list(map(int, input().split())))
-largest = -1
-largestColumn = 0
-largestRow = 0
+    temp = list(map(int, input().split()))
+    lst.append(temp)
+curr = -1
 for i in range(9):
     for j in range(9):
-        if lst[i][j] > largest:
-            largest = lst[i][j]
-            largestColumn = i + 1
-            largestRow = j + 1
-print(largest)
-print(largestColumn, largestRow)
+        if lst[i][j] > curr:
+            curr = lst[i][j]
+            x = i + 1
+            y = j + 1
+print(curr)
+print(x, y)
